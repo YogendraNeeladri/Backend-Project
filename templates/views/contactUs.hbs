@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ContactUs</title>
+    <link rel="stylesheet" href="css/contactUs.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <link rel="icon" href="/images/neeladris-fuel-services-high-resolution-logo-black-transparent.png">
+</head>
+<body>
+    <div class="container">
+        <form onsubmit="sendEmail(); reset();return false;">
+            <h3>Contact Us</h3>
+            Sendername
+            <input type="text" id="sendername" placeholder="Your name" required>
+            <input type="email" id="to" placeholder="Your email" required>
+            <input type="number" id="Phone_number" placeholder="Your Phone Number">
+            <input type="text" id="Device_name" placeholder="Fuel Type">
+            <textarea id="subject" rows="4" placeholder="Address"></textarea><br />
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script> 
+    <script>
+        function sendEmail() {
+          (function(){
+            emailjs.init("nn1QIwKTaWz5CY9iq");
+          })();
+          var params={
+            sendername:document.querySelector("#sendername").value,
+            to:document.querySelector("#to").value,
+            Phone_number:document.querySelector("#Phone_number").value,
+            Device_name:document.querySelector("#Device_name").value,
+            subject:document.querySelector("#subject").value,
+          };
+          var service="service_6mwn5de";
+          var template="template_lk9559m";
+          emailjs.send(service,template,params)
+          .then(res=>{
+                alert("Email sent succcessfully");
+          })
+          .catch();
+}
+
+
+    </script>
+</body>
+</html>

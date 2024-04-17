@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap");
+
+:root {
+    --color1: #ab4e68;
+    --color2: #b07156;
+    --color3: #533745;
+    --color4: #9d9171;
+    --color5: #c4a287;
+    --color6: #4a646c;
+    --color7: #333;
+    --color8: #fff;
+    --transition: all 0.3s ease-in-out;
+}
+
+* {
+    font-family: "Jost", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 30px;
+    min-height: 100vh;
+}
+
+/* prevent body scroll when cart is open */
+body:has(.show) {
+    overflow: hidden;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    padding: 3px 10px;
+    transition: var(--transition);
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.logo_head {
+    font-weight: 600;
+    color: #FFffFF;
+}
+
+.half_hed {
+    font-weight: 700;
+    font-size: 24px;
+    color:  #fbff00;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    border: 2px solid;
+}
+
+
+.navbar-nav .nav-link {
+    padding: 0.5rem 1rem;
+    margin: 0 5px;
+    color: #ffffff;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #a8a8a8;
+}
+
+.contact-btn {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 20px;
+    font-size: 16px;
+    margin-left: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.contact-btn:hover {
+    background-color: #0056b3;
+}
+
+.wcss {
+    background-image: url('https://images.unsplash.com/photo-1515643395264-3f8c19a2dc77?q=80&w=2462&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    
+}
+
+.hh {
+    color: white;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.imge {
+    width: 300px;
+
+    margin-bottom: 20px;
+}
+
+
+
+
+body{
+    background-color: #f9f6f2;
+}
+.card-img-top{
+border-radius: 50px;
+padding: 20px;
+}
+.card{
+border-radius: 30px;
+box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+.card-body{
+padding: 25px;
+margin-top: -15px;
+}
+
+.btn-primary{
+border-radius: 50px;
+width: 120px;
+}
+.btn-primary:hover{
+background-color: black;
+border: none;
+}
+h3,h5{
+color: rgb(0, 91, 228);
+}
+
+
+.whatsapp_float{
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+}
+.whatsapp_float_btn{
+    height: 50px;
+}

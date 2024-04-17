@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>NEELADRI'S FUEL SERVICES</title>
+    <link rel="icon" href="/images/neeladris-fuel-services-high-resolution-logo-black-transparent.png">
+</head>
+<body>
+    <body>
+    <div class="container">
+        <h1>Login Form</h1>
+        <form id="login-form"  action="/login" method="post">
+            <input placeholder="Email" id="email" name="email" type="email" required>
+            <div class="password-container">
+                <input placeholder="Password" id="password" name="password" type="password" required>
+                <i class="eye-icon fas fa-eye-slash"></i>
+            </div>
+            <input class="sub" type="submit" value="Login">
+        </form>
+        <div id="alerts"></div>
+        <h3>Don't have an account? <a href="/register">Sign Up</a></h3>
+    </div>
+
+    <script>
+        const passwordInput = document.getElementById('password');
+        const eyeIcon = document.querySelector('.eye-icon');
+
+        eyeIcon.addEventListener('click', () => {
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                eyeIcon.classList.remove('fa-eye-slash');
+                eyeIcon.classList.add('fa-eye');
+            } else {
+                passwordInput.type = 'password';
+                eyeIcon.classList.remove('fa-eye');
+                eyeIcon.classList.add('fa-eye-slash');
+            }
+        });
+    </script>
+</body>
+
+</body>
+</html>
